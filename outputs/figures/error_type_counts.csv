@@ -1,0 +1,9 @@
+error_type,count
+AssertionError,208
+TypeError,114
+NameError,32
+ValueError,4
+RecursionError,3
+Timeout,2
+AttributeError,1
+SyntaxError,1

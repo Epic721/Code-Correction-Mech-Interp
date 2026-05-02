@@ -67,16 +67,20 @@ def load_tl_model(cfg):
     """loads the model through transformerlens for activation caching"""
     log.info(f"loading {cfg.model_name} via transformerlens")
 
-    # pass hf token through for gated models (gemma etc)
-    from_pretrained_kwargs = {}
-    if cfg.hf_token:
-        from_pretrained_kwargs["token"] = cfg.hf_token
+    # TransformerLens can briefly spike memory when loading + processing
+    # reduced-precision models via from_pretrained. The no-processing path
+    # avoids that higher peak and is usually safer on shared cluster nodes.
+    use_no_processing = cfg.torch_dtype in (torch.float16, torch.bfloat16)
+    loader = (
+        HookedTransformer.from_pretrained_no_processing
+        if use_no_processing
+        else HookedTransformer.from_pretrained
+    )
 
-    model = HookedTransformer.from_pretrained(
+    model = loader(
         cfg.model_name,
         device=cfg.device,
         dtype=cfg.torch_dtype,
-        **from_pretrained_kwargs,
     )
 
     log.info(

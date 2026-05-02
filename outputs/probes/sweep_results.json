@@ -1,0 +1,418 @@
+[
+  {
+    "layer": 0,
+    "probe": "linear",
+    "accuracy": 0.6,
+    "precision": 0.88,
+    "recall": 0.5641,
+    "f1": 0.6875
+  },
+  {
+    "layer": 0,
+    "probe": "mlp",
+    "accuracy": 0.75,
+    "precision": 0.8272,
+    "recall": 0.859,
+    "f1": 0.8428
+  },
+  {
+    "layer": 1,
+    "probe": "linear",
+    "accuracy": 0.54,
+    "precision": 0.8478,
+    "recall": 0.5,
+    "f1": 0.629
+  },
+  {
+    "layer": 1,
+    "probe": "mlp",
+    "accuracy": 0.73,
+    "precision": 0.7865,
+    "recall": 0.8974,
+    "f1": 0.8383
+  },
+  {
+    "layer": 2,
+    "probe": "linear",
+    "accuracy": 0.62,
+    "precision": 0.8704,
+    "recall": 0.6026,
+    "f1": 0.7121
+  },
+  {
+    "layer": 2,
+    "probe": "mlp",
+    "accuracy": 0.72,
+    "precision": 0.7976,
+    "recall": 0.859,
+    "f1": 0.8272
+  },
+  {
+    "layer": 3,
+    "probe": "linear",
+    "accuracy": 0.62,
+    "precision": 0.9167,
+    "recall": 0.5641,
+    "f1": 0.6984
+  },
+  {
+    "layer": 3,
+    "probe": "mlp",
+    "accuracy": 0.76,
+    "precision": 0.8214,
+    "recall": 0.8846,
+    "f1": 0.8519
+  },
+  {
+    "layer": 4,
+    "probe": "linear",
+    "accuracy": 0.6,
+    "precision": 0.88,
+    "recall": 0.5641,
+    "f1": 0.6875
+  },
+  {
+    "layer": 4,
+    "probe": "mlp",
+    "accuracy": 0.73,
+    "precision": 0.8228,
+    "recall": 0.8333,
+    "f1": 0.828
+  },
+  {
+    "layer": 5,
+    "probe": "linear",
+    "accuracy": 0.62,
+    "precision": 0.8571,
+    "recall": 0.6154,
+    "f1": 0.7164
+  },
+  {
+    "layer": 5,
+    "probe": "mlp",
+    "accuracy": 0.76,
+    "precision": 0.8068,
+    "recall": 0.9103,
+    "f1": 0.8554
+  },
+  {
+    "layer": 6,
+    "probe": "linear",
+    "accuracy": 0.6,
+    "precision": 0.88,
+    "recall": 0.5641,
+    "f1": 0.6875
+  },
+  {
+    "layer": 6,
+    "probe": "mlp",
+    "accuracy": 0.77,
+    "precision": 0.8161,
+    "recall": 0.9103,
+    "f1": 0.8606
+  },
+  {
+    "layer": 7,
+    "probe": "linear",
+    "accuracy": 0.7,
+    "precision": 0.9138,
+    "recall": 0.6795,
+    "f1": 0.7794
+  },
+  {
+    "layer": 7,
+    "probe": "mlp",
+    "accuracy": 0.71,
+    "precision": 0.8267,
+    "recall": 0.7949,
+    "f1": 0.8105
+  },
+  {
+    "layer": 8,
+    "probe": "linear",
+    "accuracy": 0.61,
+    "precision": 0.8545,
+    "recall": 0.6026,
+    "f1": 0.7068
+  },
+  {
+    "layer": 8,
+    "probe": "mlp",
+    "accuracy": 0.77,
+    "precision": 0.8235,
+    "recall": 0.8974,
+    "f1": 0.8589
+  },
+  {
+    "layer": 9,
+    "probe": "linear",
+    "accuracy": 0.62,
+    "precision": 0.8704,
+    "recall": 0.6026,
+    "f1": 0.7121
+  },
+  {
+    "layer": 9,
+    "probe": "mlp",
+    "accuracy": 0.8,
+    "precision": 0.8152,
+    "recall": 0.9615,
+    "f1": 0.8824
+  },
+  {
+    "layer": 10,
+    "probe": "linear",
+    "accuracy": 0.61,
+    "precision": 0.8545,
+    "recall": 0.6026,
+    "f1": 0.7068
+  },
+  {
+    "layer": 10,
+    "probe": "mlp",
+    "accuracy": 0.76,
+    "precision": 0.8293,
+    "recall": 0.8718,
+    "f1": 0.85
+  },
+  {
+    "layer": 11,
+    "probe": "linear",
+    "accuracy": 0.57,
+    "precision": 0.8571,
+    "recall": 0.5385,
+    "f1": 0.6614
+  },
+  {
+    "layer": 11,
+    "probe": "mlp",
+    "accuracy": 0.79,
+    "precision": 0.8519,
+    "recall": 0.8846,
+    "f1": 0.8679
+  },
+  {
+    "layer": 12,
+    "probe": "linear",
+    "accuracy": 0.64,
+    "precision": 0.875,
+    "recall": 0.6282,
+    "f1": 0.7313
+  },
+  {
+    "layer": 12,
+    "probe": "mlp",
+    "accuracy": 0.77,
+    "precision": 0.8481,
+    "recall": 0.859,
+    "f1": 0.8535
+  },
+  {
+    "layer": 13,
+    "probe": "linear",
+    "accuracy": 0.68,
+    "precision": 0.8966,
+    "recall": 0.6667,
+    "f1": 0.7647
+  },
+  {
+    "layer": 13,
+    "probe": "mlp",
+    "accuracy": 0.81,
+    "precision": 0.8642,
+    "recall": 0.8974,
+    "f1": 0.8805
+  },
+  {
+    "layer": 14,
+    "probe": "linear",
+    "accuracy": 0.64,
+    "precision": 0.8889,
+    "recall": 0.6154,
+    "f1": 0.7273
+  },
+  {
+    "layer": 14,
+    "probe": "mlp",
+    "accuracy": 0.77,
+    "precision": 0.8571,
+    "recall": 0.8462,
+    "f1": 0.8516
+  },
+  {
+    "layer": 15,
+    "probe": "linear",
+    "accuracy": 0.62,
+    "precision": 0.8704,
+    "recall": 0.6026,
+    "f1": 0.7121
+  },
+  {
+    "layer": 15,
+    "probe": "mlp",
+    "accuracy": 0.81,
+    "precision": 0.8554,
+    "recall": 0.9103,
+    "f1": 0.882
+  },
+  {
+    "layer": 16,
+    "probe": "linear",
+    "accuracy": 0.61,
+    "precision": 0.8545,
+    "recall": 0.6026,
+    "f1": 0.7068
+  },
+  {
+    "layer": 16,
+    "probe": "mlp",
+    "accuracy": 0.75,
+    "precision": 0.8354,
+    "recall": 0.8462,
+    "f1": 0.8408
+  },
+  {
+    "layer": 17,
+    "probe": "linear",
+    "accuracy": 0.61,
+    "precision": 0.8545,
+    "recall": 0.6026,
+    "f1": 0.7068
+  },
+  {
+    "layer": 17,
+    "probe": "mlp",
+    "accuracy": 0.81,
+    "precision": 0.8554,
+    "recall": 0.9103,
+    "f1": 0.882
+  },
+  {
+    "layer": 18,
+    "probe": "linear",
+    "accuracy": 0.7,
+    "precision": 0.8871,
+    "recall": 0.7051,
+    "f1": 0.7857
+  },
+  {
+    "layer": 18,
+    "probe": "mlp",
+    "accuracy": 0.81,
+    "precision": 0.8554,
+    "recall": 0.9103,
+    "f1": 0.882
+  },
+  {
+    "layer": 19,
+    "probe": "linear",
+    "accuracy": 0.61,
+    "precision": 0.8305,
+    "recall": 0.6282,
+    "f1": 0.7153
+  },
+  {
+    "layer": 19,
+    "probe": "mlp",
+    "accuracy": 0.81,
+    "precision": 0.8554,
+    "recall": 0.9103,
+    "f1": 0.882
+  },
+  {
+    "layer": 20,
+    "probe": "linear",
+    "accuracy": 0.68,
+    "precision": 0.8485,
+    "recall": 0.7179,
+    "f1": 0.7778
+  },
+  {
+    "layer": 20,
+    "probe": "mlp",
+    "accuracy": 0.77,
+    "precision": 0.8571,
+    "recall": 0.8462,
+    "f1": 0.8516
+  },
+  {
+    "layer": 21,
+    "probe": "linear",
+    "accuracy": 0.68,
+    "precision": 0.8833,
+    "recall": 0.6795,
+    "f1": 0.7681
+  },
+  {
+    "layer": 21,
+    "probe": "mlp",
+    "accuracy": 0.79,
+    "precision": 0.8353,
+    "recall": 0.9103,
+    "f1": 0.8712
+  },
+  {
+    "layer": 22,
+    "probe": "linear",
+    "accuracy": 0.67,
+    "precision": 0.8814,
+    "recall": 0.6667,
+    "f1": 0.7591
+  },
+  {
+    "layer": 22,
+    "probe": "mlp",
+    "accuracy": 0.77,
+    "precision": 0.8313,
+    "recall": 0.8846,
+    "f1": 0.8571
+  },
+  {
+    "layer": 23,
+    "probe": "linear",
+    "accuracy": 0.64,
+    "precision": 0.8621,
+    "recall": 0.641,
+    "f1": 0.7353
+  },
+  {
+    "layer": 23,
+    "probe": "mlp",
+    "accuracy": 0.76,
+    "precision": 0.8462,
+    "recall": 0.8462,
+    "f1": 0.8462
+  },
+  {
+    "layer": 24,
+    "probe": "linear",
+    "accuracy": 0.69,
+    "precision": 0.873,
+    "recall": 0.7051,
+    "f1": 0.7801
+  },
+  {
+    "layer": 24,
+    "probe": "mlp",
+    "accuracy": 0.76,
+    "precision": 0.8068,
+    "recall": 0.9103,
+    "f1": 0.8554
+  },
+  {
+    "layer": 25,
+    "probe": "linear",
+    "accuracy": 0.71,
+    "precision": 0.9016,
+    "recall": 0.7051,
+    "f1": 0.7914
+  },
+  {
+    "layer": 25,
+    "probe": "mlp",
+    "accuracy": 0.81,
+    "precision": 0.8315,
+    "recall": 0.9487,
+    "f1": 0.8862
+  }
+]
