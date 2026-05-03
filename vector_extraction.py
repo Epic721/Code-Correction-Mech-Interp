@@ -146,15 +146,30 @@ def load_gemma_scope_sae(
     sae_id = sae_id_template.format(layer=layer)
     log.info(f"loading SAE  release={release}  sae_id={sae_id}  device={device}")
 
-    sae, _cfg_dict, _sparsity = SAE.from_pretrained(
+    # sae, _cfg_dict, _sparsity = SAE.from_pretrained(
+    #     release=release, sae_id=sae_id, device=device,
+    # )
+    # sae.eval()
+
+    # log.info(
+    #     f"  loaded: d_in={sae.cfg.d_in}  d_sae={sae.cfg.d_sae}  "
+    #     f"hook={sae.cfg.hook_name}"
+    # )
+
+    # FIX: New sae-lens API returns just the SAE object
+    sae = SAE.from_pretrained(
         release=release, sae_id=sae_id, device=device,
     )
     sae.eval()
 
+    # FIX: Safely get the hook name without crashing if the attribute changed
+    hook = getattr(sae.cfg, "hook_name", getattr(sae.cfg, "hook_point", "unknown"))
+
     log.info(
         f"  loaded: d_in={sae.cfg.d_in}  d_sae={sae.cfg.d_sae}  "
-        f"hook={sae.cfg.hook_name}"
+        f"hook={hook}"
     )
+
     return sae
 
 

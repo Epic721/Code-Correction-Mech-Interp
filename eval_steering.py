@@ -85,15 +85,15 @@ def load_tl_model(cfg: PipelineConfig) -> HookedTransformer:
         else HookedTransformer.from_pretrained
     )
 
-    from_pretrained_kwargs = {}
-    if cfg.hf_token:
-        from_pretrained_kwargs["token"] = cfg.hf_token
+    # from_pretrained_kwargs = {}
+    # if cfg.hf_token:
+    #     from_pretrained_kwargs["token"] = cfg.hf_token
 
     model = loader(
         cfg.model_name,
         device=cfg.device,
         dtype=cfg.torch_dtype,
-        **from_pretrained_kwargs,
+        # **from_pretrained_kwargs,
     )
     model.eval()
     model.requires_grad_(False)
@@ -173,7 +173,7 @@ def make_steering_hook(mode: str, alpha: float, v: torch.Tensor):
     if mode not in SUPPORTED_INTERVENTION_MODES:
         raise ValueError(f"unknown intervention_mode {mode!r}")
 
-    def hook_fn(activation, hook_obj):
+    def hook_fn(activation, hook): # hook_obj):
         B, T, D = activation.shape
         delta = (alpha * v).to(dtype=activation.dtype, device=activation.device)
 

@@ -48,13 +48,41 @@ log = logging.getLogger(__name__)
 # model loading
 # ---------------------------------------------------------------------------
 
+# def load_tl_model(cfg: PipelineConfig) -> HookedTransformer:
+#     """
+#     same loading approach as cache_activations -- from_pretrained_no_processing
+#     for bf16/fp16 to keep the residual stream in raw HF basis (matches what we
+#     cached + what eval_steering will hook into) and avoid the memory spike
+#     that the standard processing path causes
+#     """
+#     log.info(f"loading {cfg.model_name} via transformerlens")
+
+#     use_no_processing = cfg.torch_dtype in (torch.float16, torch.bfloat16)
+#     loader = (
+#         HookedTransformer.from_pretrained_no_processing
+#         if use_no_processing
+#         else HookedTransformer.from_pretrained
+#     )
+
+#     from_pretrained_kwargs = {}
+#     if cfg.hf_token:
+#         from_pretrained_kwargs["token"] = cfg.hf_token
+
+#     model = loader(
+#         cfg.model_name,
+#         device=cfg.device,
+#         dtype=cfg.torch_dtype,
+#         **from_pretrained_kwargs,
+#     )
+
+#     log.info(
+#         f"  loaded: n_layers={model.cfg.n_layers}  "
+#         f"d_model={model.cfg.d_model}  "
+#         f"d_vocab={model.cfg.d_vocab}"
+#     )
+#     return model
+
 def load_tl_model(cfg: PipelineConfig) -> HookedTransformer:
-    """
-    same loading approach as cache_activations -- from_pretrained_no_processing
-    for bf16/fp16 to keep the residual stream in raw HF basis (matches what we
-    cached + what eval_steering will hook into) and avoid the memory spike
-    that the standard processing path causes
-    """
     log.info(f"loading {cfg.model_name} via transformerlens")
 
     use_no_processing = cfg.torch_dtype in (torch.float16, torch.bfloat16)
@@ -64,15 +92,12 @@ def load_tl_model(cfg: PipelineConfig) -> HookedTransformer:
         else HookedTransformer.from_pretrained
     )
 
-    from_pretrained_kwargs = {}
-    if cfg.hf_token:
-        from_pretrained_kwargs["token"] = cfg.hf_token
+    # REMOVED the from_pretrained_kwargs block entirely
 
     model = loader(
         cfg.model_name,
         device=cfg.device,
         dtype=cfg.torch_dtype,
-        **from_pretrained_kwargs,
     )
 
     log.info(
@@ -245,7 +270,7 @@ def make_v_learn_hook(prompt_end_indices: torch.Tensor, v_learn: nn.Parameter):
     applies the same direction at any chosen alpha.
     """
 
-    def hook_fn(activation, hook_obj):
+    def hook_fn(activation, hook): # , hook_obj):
         v_cast = v_learn.to(activation.dtype)
         B, T, D = activation.shape
 
