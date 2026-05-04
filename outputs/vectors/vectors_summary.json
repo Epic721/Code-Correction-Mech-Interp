@@ -1,0 +1,239 @@
+{
+  "config": {
+    "dataset": "mbpp",
+    "model_name": "google/gemma-2-2b-it",
+    "caa_layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "sae_layers": [
+      12,
+      20
+    ],
+    "sae_release": "gemma-scope-2b-pt-res-canonical",
+    "sae_id_template": "layer_{layer}/width_16k/canonical",
+    "sae_width": "16k",
+    "sign_convention": "v_points_toward_failure (x' = x - alpha * v)"
+  },
+  "caa": [],
+  "sae": [
+    {
+      "method": "sae",
+      "layer": 12,
+      "top_feature_idx": 8777,
+      "top_t_stat": 5.606453895568848,
+      "top_mean_fail": 9.630914688110352,
+      "top_mean_pass": 9.413583755493164,
+      "top_fire_rate_fail": 1.0,
+      "top_fire_rate_pass": 1.0,
+      "v_sae_norm": 1.0,
+      "n_fail": 366,
+      "n_pass": 134,
+      "n_features_total": 16384,
+      "n_features_active": 191,
+      "top_k_features": [
+        {
+          "feature_idx": 8777,
+          "t_stat": 5.606453895568848,
+          "mean_fail": 9.630914688110352,
+          "mean_pass": 9.413583755493164,
+          "fire_rate_fail": 1.0,
+          "fire_rate_pass": 1.0
+        },
+        {
+          "feature_idx": 13845,
+          "t_stat": 5.076991558074951,
+          "mean_fail": 4.9077253341674805,
+          "mean_pass": 4.653195381164551,
+          "fire_rate_fail": 1.0,
+          "fire_rate_pass": 1.0
+        },
+        {
+          "feature_idx": 2043,
+          "t_stat": 4.86443567276001,
+          "mean_fail": 5.012147903442383,
+          "mean_pass": 4.848668575286865,
+          "fire_rate_fail": 1.0,
+          "fire_rate_pass": 1.0
+        },
+        {
+          "feature_idx": 3463,
+          "t_stat": 4.715750217437744,
+          "mean_fail": 11.07131576538086,
+          "mean_pass": 10.788596153259277,
+          "fire_rate_fail": 1.0,
+          "fire_rate_pass": 1.0
+        },
+        {
+          "feature_idx": 6001,
+          "t_stat": 4.53277063369751,
+          "mean_fail": 6.117548942565918,
+          "mean_pass": 6.016719818115234,
+          "fire_rate_fail": 1.0,
+          "fire_rate_pass": 1.0
+        },
+        {
+          "feature_idx": 4128,
+          "t_stat": 4.296075820922852,
+          "mean_fail": 4.241517543792725,
+          "mean_pass": 4.079035758972168,
+          "fire_rate_fail": 1.0,
+          "fire_rate_pass": 1.0
+        },
+        {
+          "feature_idx": 2291,
+          "t_stat": 3.8151023387908936,
+          "mean_fail": 35.180545806884766,
+          "mean_pass": 34.899478912353516,
+          "fire_rate_fail": 1.0,
+          "fire_rate_pass": 1.0
+        },
+        {
+          "feature_idx": 3048,
+          "t_stat": 3.712404489517212,
+          "mean_fail": 4.745509147644043,
+          "mean_pass": 4.60396671295166,
+          "fire_rate_fail": 1.0,
+          "fire_rate_pass": 1.0
+        },
+        {
+          "feature_idx": 13811,
+          "t_stat": 3.6625146865844727,
+          "mean_fail": 2.594576358795166,
+          "mean_pass": 1.954777717590332,
+          "fire_rate_fail": 0.7103825211524963,
+          "fire_rate_pass": 0.5597015023231506
+        },
+        {
+          "feature_idx": 391,
+          "t_stat": 3.596283435821533,
+          "mean_fail": 0.5907697081565857,
+          "mean_pass": 0.2286853790283203,
+          "fire_rate_fail": 0.17213115096092224,
+          "fire_rate_pass": 0.06716418266296387
+        }
+      ]
+    },
+    {
+      "method": "sae",
+      "layer": 20,
+      "top_feature_idx": 6263,
+      "top_t_stat": 5.193367958068848,
+      "top_mean_fail": 12.7871732711792,
+      "top_mean_pass": 12.054871559143066,
+      "top_fire_rate_fail": 1.0,
+      "top_fire_rate_pass": 1.0,
+      "v_sae_norm": 1.0,
+      "n_fail": 366,
+      "n_pass": 134,
+      "n_features_total": 16384,
+      "n_features_active": 306,
+      "top_k_features": [
+        {
+          "feature_idx": 6263,
+          "t_stat": 5.193367958068848,
+          "mean_fail": 12.7871732711792,
+          "mean_pass": 12.054871559143066,
+          "fire_rate_fail": 1.0,
+          "fire_rate_pass": 1.0
+        },
+        {
+          "feature_idx": 3488,
+          "t_stat": 4.188556671142578,
+          "mean_fail": 1.2696480751037598,
+          "mean_pass": 0.39054644107818604,
+          "fire_rate_fail": 0.16120219230651855,
+          "fire_rate_pass": 0.05223880708217621
+        },
+        {
+          "feature_idx": 9170,
+          "t_stat": 3.9994239807128906,
+          "mean_fail": 3.3586177825927734,
+          "mean_pass": 1.931871771812439,
+          "fire_rate_fail": 0.4344262182712555,
+          "fire_rate_pass": 0.24626865983009338
+        },
+        {
+          "feature_idx": 10851,
+          "t_stat": 3.976628541946411,
+          "mean_fail": 23.984228134155273,
+          "mean_pass": 23.231786727905273,
+          "fire_rate_fail": 1.0,
+          "fire_rate_pass": 1.0
+        },
+        {
+          "feature_idx": 7145,
+          "t_stat": 3.6274266242980957,
+          "mean_fail": 0.7121652364730835,
+          "mean_pass": 0.16820475459098816,
+          "fire_rate_fail": 0.09562841802835464,
+          "fire_rate_pass": 0.02238805964589119
+        },
+        {
+          "feature_idx": 8996,
+          "t_stat": 3.6211509704589844,
+          "mean_fail": 11.235913276672363,
+          "mean_pass": 10.511536598205566,
+          "fire_rate_fail": 0.9918032884597778,
+          "fire_rate_pass": 0.9776119589805603
+        },
+        {
+          "feature_idx": 12916,
+          "t_stat": 3.5905697345733643,
+          "mean_fail": 1.475305438041687,
+          "mean_pass": 0.5980762839317322,
+          "fire_rate_fail": 0.18579235672950745,
+          "fire_rate_pass": 0.0746268630027771
+        },
+        {
+          "feature_idx": 11661,
+          "t_stat": 3.4471755027770996,
+          "mean_fail": 10.661994934082031,
+          "mean_pass": 9.881010055541992,
+          "fire_rate_fail": 0.9918032884597778,
+          "fire_rate_pass": 0.9626865386962891
+        },
+        {
+          "feature_idx": 16158,
+          "t_stat": 3.2202987670898438,
+          "mean_fail": 6.867558479309082,
+          "mean_pass": 5.452662467956543,
+          "fire_rate_fail": 0.7431694269180298,
+          "fire_rate_pass": 0.6268656849861145
+        },
+        {
+          "feature_idx": 12917,
+          "t_stat": 3.084277868270874,
+          "mean_fail": 10.767755508422852,
+          "mean_pass": 10.425863265991211,
+          "fire_rate_fail": 1.0,
+          "fire_rate_pass": 1.0
+        }
+      ]
+    }
+  ]
+}
