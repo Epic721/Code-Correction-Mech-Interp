@@ -15,7 +15,7 @@ export STEER_EMAIL="your_email@gatech.edu"
 # REQUIRED: name of the conda env w/ torch + transformer_lens + sae_lens
 # (run `conda env list` to find yours)
 # -------------------------------------------------------------------
-export STEER_CONDA_ENV="hw3_7643"
+export STEER_CONDA_ENV="dl_proj"
 
 # -------------------------------------------------------------------
 # OPTIONAL: path to your hf token file. the file should contain just
